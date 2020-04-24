@@ -1,0 +1,605 @@
+---
+title: 'QUINOA: RESULTADOS GRAFICOS'
+output:
+  html_document: default
+---
+
+Buscar PeerJ. Author guidelines
+
+```{r Packages required, include=FALSE}
+#Set working directory
+setwd("C:/Users/Alex/OneDrive - Stony Brook University/05. Proyectos/DATOS PROYECTO QUINOA/Estadistica Alex y rawdata") 
+
+library('Rmisc') #Summarise data
+library("emmeans") #Multiple Tukey Comparisons
+library("multcompView")  #Multiple Tukey Comparisons
+library("tidyr") #Tidy data
+library("fmsb") #Radarchart graphical package
+library("agricolae") #Duncan multiple comparisons
+```
+
+
+##Table 1. Plant Parameters
+```{r Table 1 Plant parameters, include=FALSE}
+#Load rawtallos
+rawTallos<-read.csv("rawTallos.csv")
+
+names<-colnames(rawTallos)
+names<-names[-c(1:4)]
+
+listvar<-list()
+for (i in 1:10){
+  listvar[[i]]<-summarySE(rawTallos,measurevar = names[i],groupvars = c("VAR","LOC","VARLOC"))
+  listvar[[i]]$variable<-names[i]
+  colnames(listvar[[i]])<-c("LOC","VAR","VARLOC","N","mean",
+                            "sd","se","ci","variable")
+   }
+names(listvar)<-names
+
+df<-data.frame()
+for (i in 1:10){
+  df<-rbind(df,listvar[[i]])
+}
+#Object df contains statistical information por each variable (mean, sd, se, ci)
+
+rawtT<-rawTallos
+#Tukey Test Multiple Comparison for each variable
+
+#Convertir en narrow form con columna llamada variable, y otra que sea el valor
+tinytT<-gather(rawtT,"variable","value",c(5:14))
+
+
+variable.list<-as.factor(unique(tinytT$variable))
+
+
+#Subsetear por variable
+list.tT<-list()
+for (i in 1:10){
+  list.tT[[i]]<-tinytT[tinytT$variable==variable.list[i],]
+}
+
+#Eliminar NA
+for (i in 1:10){
+  list.tT[[i]]<-na.omit(list.tT[[i]])
+}
+names(list.tT)<-variable.list
+
+#Realizar un modelo
+lmtT<-list()
+for (i in 1:10){
+  lmtT[[i]]<-lm(value~VARLOC,data=list.tT[[i]])
+}
+
+
+marginal<-list()
+for (i in 1:10){
+  marginal[[i]] <- emmeans(lmtT[[i]], "VARLOC")
+}
+
+pairslist<-list()
+for (i in 1:10){
+  pairslist[[i]]<-pairs(marginal[[i]],adjust="tukey")
+}
+
+cldlist<-list()
+for (i in 1:10){
+  cldlist[[i]]<-cld(marginal[[i]],alpha=0.05,Letters=letters,adjust="tukey")
+}
+names(cldlist)<-variable.list
+```
+
+```{r rawTallosFinal, include=FALSE}
+tT<-read.csv("TablaTallosFinal.csv",sep=",")
+```
+
+```{r echo=FALSE}
+tT
+```
+(*) Quiere decir que no hubo suficiente grano para hacer el analisis porque se perdio.
+
+Los grupos Duncan estan ya en la tabla.
+
+```{r Tukey Grupos tabla 1, include=FALSE}
+#Tukey Groups
+cldlist
+```
+
+
+```{r Duncan Tabla 1, include=FALSE}
+Grupos.Mezclas.Duncan<-list()
+for (i in 1:10){
+  Modelo <- lm(value ~ VARLOC,data=list.tT[[i]])
+  ANOVA  <- aov(Modelo)
+
+
+Grupos.Mezclas.Duncan[[i]] <-duncan.test(y = ANOVA, trt = "VARLOC", group = T, console = T)
+}
+names(Grupos.Mezclas.Duncan)<-names
+```
+
+
+```{r Grupos Duncan Tabla 1, include=FALSE}
+Grupos.Mezclas.Duncan
+```
+
+
+
+
+##Fig 1. A y B. Analisis elementos. Radarcharts
+
+Comparar variedad (A) y localizaciones (B).
+
+Suplementaria: valores absolutos en forma de rawdata organizada en excel
+
+```{r elem, include=FALSE}
+###ELEMENTS###
+rawelem<-read.csv(file='rawelem.csv')
+rawelem$VARLOC<-factor(rawelem$VARLOC,
+                         levels=c('Regalona-Chile','Salcedo-Chile',
+                                  'Titicaca-Chile','Regalona-Spain',
+                                  'Salcedo-Spain','Titicaca-Spain','Salcedo-Peru'))
+
+#Vector ELEMENTs
+elemvet<-levels(rawelem$ELEMENT)
+
+#Subset por ELEMENT
+subrawelem<-list()
+for (i in 1:7){
+  subrawelem[[i]]<-rawelem[rawelem$ELEMENT==elemvet[i],]
+}
+names(subrawelem)<-elemvet
+
+
+
+#Fig 1A. Subsetear por variedad, diferencias por pais (t student,tukey)
+var<-as.factor(c("Regalona","Salcedo","Titicaca"))
+
+
+
+
+#Fig 1B. Subsetear por pais, diferencias por variedad (t student, tukey)
+loc<-as.factor(c("Chile","Peru","Spain"))
+
+
+
+```
+
+
+
+
+```{r Script radarchart, include=FALSE}
+###Summary de rawelem (nada de estadistica): Necesario para el radarchart
+sumelem.ALL<-summarySE(rawelem,measurevar ='CONCENTRATION',groupvars = c('ELEMENT','VARLOC','VAR','LOC'))
+
+# Library
+
+x<-sumelem.ALL[,c(1,2,3,4,6)]
+x<-spread(x,'ELEMENT','CONCENTRATION')
+
+
+#Maximos y minimos
+max1<-vector()
+min1<-vector()
+for (i in 4:10){
+  max1[i-3]<-max(x[,c(i)])
+  min1[i-3]<-min(x[,c(i)])
+}
+
+rownames(x)<-x$VARLOC
+y<-x[,c(4:10)]
+z<-rbind(max1,min1,y)
+
+#Hacemos tres radar chart para cada LOC
+z.reg<-z[c(1,2,3,6),]
+z.sal<-z[c(1,2,4,7,9),]
+z.tit<-z[c(1,2,5,8),]
+
+#Hacemos tres radar chart para cada LOC
+
+z.chile<-z[c(1:5),]
+z.peru<-z[c(1,2,9),]
+z.esp<-z[c(1,2,6,7,8),]
+```
+
+
+A. Incluir estadistica por Tukey (tres grupos) o t-Student (dos grupos) para cada elemento subseteando por VARIEDAD, anova-1 factor (pais) y Tukey/t-student para sacar grupos A-B-C-D...
+Leyenda. Rojo-Chile, Azul-Spain, Negro-Peru
+
+```{r figura 1A, echo=FALSE}
+par(mfrow=c(1,1))
+#Rojo Chile, blue Spain
+radarchart(z.reg,title = 'Regalona',pcol=c('red','blue'),plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+
+#Negro Chile, blue Spain, rojo Peru
+radarchart(z.sal, title = 'Salcedo',pcol=c('black','blue','red'),plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+
+#Blue Spain, Rojo Chile
+radarchart(z.tit, title = 'Titicaca',pcol=c('red','blue'),plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+```
+
+B. Incluir estadistica por Tukey (tres grupos) o t-Student (dos grupos) para cada elemento subseteando por PAIS, anova-1 factor (variedad) y Tukey/t-student para sacar grupos A-B-C-D...
+
+Leyenda. Rojo-Salcedo, Negro-Regalona, Azul-Titicaca
+
+```{r figura 1B, echo=FALSE}
+par(mfrow=c(1,1))
+#Negro es Regalona, Rojo Salcedo, Titicaca es Azul
+radarchart(z.chile,title = 'Chile',pcol=c("black","red","blue"),plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+
+#Rojo Salcedo
+radarchart(z.peru, title = 'Peru',pcol='red',plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+
+#Negro es Regalona, Rojo Salcedo, Titicaca Azul
+radarchart(z.esp, title = 'Spain',pcol=c("black","red","blue"),plwd=2,plty=1,vlabel=c("Ca","Fe","Mg","P","K","Na","Zn"))
+
+```
+
+
+##Fig 2. Fitato
+
+Datos no disponibles.
+
+##Fig 3. Proteina-Total
+
+Barras mas estrechas. Grupos Tukey. Barras de error representan CI
+
+```{r script FRAP y N-total, include=FALSE}
+#Script FRAP y N-total
+
+rawFRAPN<-read.csv('rawFRAPN.csv',dec = ",")
+rawFRAPN$VARLOC<-factor(rawFRAPN$VARLOC,
+                        levels=c('Regalona-Chile','Salcedo-Chile',
+                                 'Titicaca-Chile','Salcedo-Peru','Regalona-Spain',
+                                 'Salcedo-Spain','Titicaca-Spain'))
+
+for (i in 5:13){
+  rawFRAPN[,i]<-as.numeric(rawFRAPN[,i])
+}
+
+
+rawFRAPN1<-rawFRAPN[,c(2,3,4,7,13)]
+colnames(rawFRAPN1)<-c('VAR','LOC','VARLOC','PROT.PERCENT','FRAP')
+
+rawNtotal<-rawFRAPN1[,c(1,2,3,4)]  #N Total
+rawFRAP<-rawFRAPN1[,c(1,2,3,5)]    #FRAP
+
+
+#Union
+rawNtotal$VARIABLE<-c("Ntotal")
+rawFRAP$VARIABLE<-c("FRAP")
+colnames(rawNtotal)<-c("VAR","LOC","VARLOC","value","VARIABLE")
+colnames(rawFRAP)<-c("VAR","LOC","VARLOC","value","VARIABLE")
+
+NTOTFRAP<-rbind(rawNtotal,rawFRAP)
+
+#Subset por VARIABLE
+VARNF<-unique(NTOTFRAP$VARIABLE)
+subNTOTFRAP<-list()
+for (i in 1:2){
+  subNTOTFRAP[[i]]<-NTOTFRAP[NTOTFRAP$VARIABLE==VARNF[i],]
+}
+names(subNTOTFRAP)<-VARNF
+
+######################################################
+##Fin de preparacion de datos
+```
+
+
+
+```{r Tukey FRAP y N-total, include=FALSE}
+#LM FACTORES CON INTERACCION. VARLOC
+lm.NTOTFRAP<-list()
+for (i in 1:2){
+  lm.NTOTFRAP[[i]]<-lm(value~VARLOC,data=subNTOTFRAP[[i]])
+}
+names(lm.NTOTFRAP)<-VARNF
+
+marginal<-list()
+for (i in 1:2){
+  marginal[[i]] <- emmeans(lm.NTOTFRAP[[i]], "VARLOC")
+}
+
+pairslist<-list()
+for (i in 1:2){
+  pairslist[[i]]<-pairs(marginal[[i]],adjust="tukey")
+}
+
+cldNFRAP<-list()
+for (i in 1:2){
+  cldNFRAP[[i]]<-cld(marginal[[i]],alpha=0.05,Letters=letters,adjust="tukey")
+}
+names(cldNFRAP)<-VARNF
+
+####Resumenes de datos, medias, sd, se, ci
+library(Rmisc)
+colnames(rawNtotal)<-c("VAR","LOC","VARLOC","PROT.PERCENT","VARIABLE")
+sumN.VARLOC<-summarySE(rawNtotal,measurevar = 'PROT.PERCENT',groupvars = c('VARLOC','VAR','LOC'))
+
+colnames(rawFRAP)<-c("VAR","LOC","VARLOC","FRAP","VARIABLE")
+sumFRAP.VARLOC<-summarySE(rawFRAP,measurevar = 'FRAP',groupvars = c('VARLOC','VAR','LOC'))
+```
+
+
+```{r Grafico N.Total con grupos Tukey, echo=FALSE}
+#N-Total con grupos Tukey
+
+library(ggplot2)
+###Graficos de barras de concentraciones
+ggplot(cldNFRAP[[1]],aes(x=VARLOC,y=emmean,fill=VARLOC,label=.group))+
+  geom_bar(position="dodge", stat="identity",width = 0.6)+
+  geom_errorbar(aes(ymin=lower.CL, ymax=upper.CL),width=0.1)+
+  theme_classic()+
+  ylab('PROT.PERCENT')+
+  scale_fill_grey()+
+  theme(legend.position='none')+
+  theme(axis.text.x=element_text(angle = 40, vjust = 0.5))+
+  geom_text(aes(label=.group),vjust=-3.8)
+```
+
+
+```{r N-Total Test Duncan, include=FALSE}
+#N-Total Duncan
+
+Modelo <- lm(value ~ VARLOC,data=subNTOTFRAP[[1]])
+ANOVA  <- aov(Modelo)
+
+Grupos.Mezclas.Duncan <-duncan.test(y = ANOVA, trt = "VARLOC", group = T, console = T)
+
+
+
+
+
+
+bar.group(x = Grupos.Mezclas.Duncan$groups,
+          ylim=c(0,20),
+          main="Prueba de comparación de medias por medio del método Duncan N-total",
+          ylab="Rendimiento del proceso",
+          col="blue",
+          las=2)
+```
+
+
+
+##Fig 4. Aminoacidos
+
+Barras de error 95% CI
+
+
+
+```{r Fig4 Aminoacidos Tukey ,include=FALSE}
+###AMINOACIDS###
+rawamino<-read.csv(file='rawamino.csv')
+rawamino$VARLOC<-factor(rawamino$VARLOC,
+                         levels=c('Regalona-Chile','Salcedo-Chile',
+                                  'Titicaca-Chile','Salcedo-Peru','Regalona-Spain',
+                                  'Salcedo-Spain','Titicaca-Spain'))
+
+#Vector aminoacidos
+aminovet<-levels(rawamino$AMINOACID)
+
+#Subset por AMINOACID
+subrawamino<-list()
+for (i in 1:19){
+  subrawamino[[i]]<-rawamino[rawamino$AMINOACID==aminovet[i],]
+}
+names(subrawamino)<-aminovet
+
+#LM FACTORES CON INTERACCION. VARLOC
+lm.amino<-list()
+for (i in 1:19){
+  lm.amino[[i]]<-lm(CONCENTRATION~VARLOC,data=subrawamino[[i]])
+}
+names(lm.amino)<-aminovet
+
+#Pagina 374. Mangiafico
+library(emmeans)
+
+marginal<-list()
+for (i in 1:19){
+  marginal[[i]] <- emmeans(lm.amino[[i]], "VARLOC")
+}
+
+pairslist<-list()
+for (i in 1:19){
+  pairslist[[i]]<-pairs(marginal[[i]],adjust="tukey")
+}
+
+cldamino<-list()
+for (i in 1:19){
+  cldamino[[i]]<-cld(marginal[[i]],alpha=0.05,Letters=letters,adjust="tukey")
+}
+names(cldamino)<-aminovet
+```
+
+
+```{r graficos aminoacidos,echo=FALSE}
+
+names(cldamino)<-aminovet
+
+for (i in 1:19){
+  cldamino[[i]]$AMINOACID<-aminovet[i]
+}
+
+aminotab<-rbind(cldamino[[1]],cldamino[[2]],cldamino[[3]],cldamino[[4]],cldamino[[5]],cldamino[[6]],
+      cldamino[[7]],cldamino[[8]],cldamino[[9]],cldamino[[10]],cldamino[[11]],cldamino[[12]],cldamino[[13]],cldamino[[14]],cldamino[[15]],cldamino[[16]],cldamino[[17]],cldamino[[18]],
+      cldamino[[19]])
+
+aminotab<-read.csv("aminotab.csv")
+
+#############      GRAFICOS         ################
+###Grafico general de puntos y barras de error para los dos factores
+library(ggplot2)
+
+p=1
+
+ggplot(aminotab, aes(x=LOC,y=emmean,color=VAR)) +
+    geom_errorbar(aes(ymin=lower.CL,ymax=upper.CL),width=.2, size=0.7,
+                  position=position_dodge(p)) +
+    geom_point(shape=15, size=1, position=position_dodge(p)) +
+    theme_classic()+
+    scale_color_manual(values = c("black", "red","blue"))+
+    facet_wrap(~AMINOACID,scales="free")+
+  ylab('CONCENTRATION (ug/g)')+
+  theme(text =element_text(size=8),axis.text.x = element_text(angle=25, vjust=0.5,hjust=0.5))+
+  theme(legend.position='bottom')+
+  geom_text(aes(label=.group),vjust=1,hjust=-0.02,position=position_dodge(p),size=2.3,check_overlap=TRUE)
+
+
+```
+
+##Fig 5. FRAP (antioxidante)
+Barras mas estrechas. Barras de error representan CI
+
+
+```{r graficos FRAP Tukey,echo=FALSE}
+#############      GRAFICOS 
+################
+###Grafico general de puntos y barras de error para los dos factores
+#Unidades de la variable FRAP mmol. ET100g 
+
+library(ggplot2)
+###Graficos de barras de concentraciones
+
+ggplot(cldNFRAP[[2]],aes(x=VARLOC,y=emmean,fill=VARLOC,label=.group))+
+  geom_bar(position="dodge", stat="identity",width = 0.95)+
+  geom_errorbar(aes(ymin=lower.CL, ymax=upper.CL),width=0.1)+
+  theme_classic()+
+  scale_fill_grey()+
+  ylab('FRAP. mmol.ET100g ')+
+  theme(legend.position='none')+
+  theme(axis.text.x=element_text(angle = 40, vjust = 0.5))+
+  geom_text(aes(label=.group),vjust=-5.2)
+```
+
+
+```{r FRAP Test Duncan, include=FALSE}
+#FRAP Duncan
+
+Modelo <- lm(value ~ VARLOC,data=subNTOTFRAP[[2]])
+ANOVA  <- aov(Modelo)
+
+Grupos.Mezclas.Duncan <-duncan.test(y = ANOVA, trt = "VARLOC", group = T, console = T)
+
+bar.group(x = Grupos.Mezclas.Duncan$groups,
+          ylim=c(0,1),
+          main="Prueba de comparación de medias por medio del método Duncan FRAP",
+          ylab="Rendimiento del proceso",
+          col="blue",
+          las=2)
+```
+
+
+##Fig 6. Porcentaje de Fibra y saponina. Media y Std.dev
+
+
+```{r include=FALSE}
+rawSAPFIB<-read.csv("rawFIBRASAP.csv")
+rawSAPFIB$VARLOC<-factor(rawSAPFIB$VARLOC,
+                        levels=c('Regalona-Chile','Salcedo-Chile',
+                                 'Titicaca-Chile','Salcedo-Peru','Regalona-Spain',
+                                 'Salcedo-Spain','Titicaca-Spain'))
+variable.list<-as.factor(unique(rawSAPFIB$VARIABLE))
+
+#Subset por SAPFIB
+subrawSAPFIB<-list()
+for (i in 1:2){
+  subrawSAPFIB[[i]]<-rawSAPFIB[rawSAPFIB$VARIABLE==variable.list[i],]
+}
+names(subrawSAPFIB)<-variable.list
+```
+
+Tukey Test
+```{r Tukey Fiber and saponin, include=FALSE}
+#LM FACTORES CON INTERACCION. VARLOC
+lm.SAPFIB<-list()
+for (i in 1:2){
+  lm.SAPFIB[[i]]<-lm(VALUE~VARLOC,data=subrawSAPFIB[[i]])
+}
+names(lm.SAPFIB)<-variable.list
+
+#Pagina 374. Mangiafico
+library(emmeans)
+
+marginal<-list()
+for (i in 1:2){
+  marginal[[i]] <- emmeans(lm.SAPFIB[[i]], "VARLOC")
+}
+
+pairslist<-list()
+for (i in 1:2){
+  pairslist[[i]]<-pairs(marginal[[i]],adjust="tukey")
+}
+
+cldSAPFIB<-list()
+for (i in 1:2){
+  cldSAPFIB[[i]]<-cld(marginal[[i]],alpha=0.05,Letters=letters,adjust="tukey")
+}
+names(cldSAPFIB)<-variable.list
+```
+
+
+```{r Tukey Plots A Saponina y B Fibra, echo=FALSE}
+library(ggplot2)
+ggplot(cldSAPFIB[[1]],aes(x=emmean,y=VARLOC,label=.group))+
+  geom_point(position="dodge", stat="identity",width = 0.6)+
+  geom_errorbarh(aes(xmin=lower.CL, xmax=upper.CL),width=0.1)+
+  theme_classic()+
+  ylab('VARLOC')+
+  xlab('SAP.PERC')+
+  scale_fill_grey()+
+  theme(legend.position='none')+
+  theme(axis.text.x=element_text(angle = 40, vjust = 0.5))+
+  geom_text(aes(label=.group),hjust=-15,vjust=0)
+
+
+ggplot(cldSAPFIB[[2]],aes(x=emmean,y=VARLOC,label=.group))+
+  geom_point(position="dodge", stat="identity",width = 0.6)+
+  geom_errorbarh(aes(xmin=lower.CL, xmax=upper.CL),width=0.1)+
+  theme_classic()+
+  ylab('VARLOC')+
+  xlab('FIBER.PERC')+
+  scale_fill_grey()+
+  theme(legend.position='none')+
+  theme(axis.text.x=element_text(angle = 40, vjust = 0.5))+
+  geom_text(aes(label=.group),hjust=-14,vjust=0)
+
+```
+
+Test Duncan
+https://rpubs.com/ctellez_gdl/63838
+
+
+SAPONINA
+```{r}
+Modelo <- lm(VALUE ~ VARLOC,data=subrawSAPFIB[[1]])
+ANOVA  <- aov(Modelo)
+
+Grupos.Mezclas.Duncan <-duncan.test(y = ANOVA, trt = "VARLOC", group = T, console = T)
+
+bar.group(x = Grupos.Mezclas.Duncan$groups,
+          ylim=c(0,2),
+          main="Prueba de comparación de medias por medio del método Duncan",
+          ylab="Rendimiento del proceso",
+          col="blue",
+          las=2)
+
+```
+
+
+FIBRA
+```{r}
+Modelo <- lm(VALUE ~ VARLOC,data=subrawSAPFIB[[2]])
+ANOVA  <- aov(Modelo)
+
+
+Grupos.Mezclas.Duncan <-duncan.test(y = ANOVA, trt = "VARLOC", group = T, console = T)
+
+
+bar.group(x = Grupos.Mezclas.Duncan$groups,
+          ylim=c(0,4),
+          main="Prueba de comparación de medias por medio del método Duncan",
+          ylab="Rendimiento del proceso",
+          col="blue",
+          las=2)
+
+```

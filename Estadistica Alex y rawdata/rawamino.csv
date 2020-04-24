@@ -1,0 +1,300 @@
+SAMPLE,VAR,LOC,VARLOC,AMINOACID,CONCENTRATION
+1,Salcedo,Spain,Salcedo-Spain,Aspartic acid,48.23030907
+15,Salcedo,Spain,Salcedo-Spain,Aspartic acid,67.13554987
+2,Regalona,Spain,Regalona-Spain,Aspartic acid,60.00738552
+9,Regalona,Spain,Regalona-Spain,Aspartic acid,45.83975347
+10,Titicaca,Spain,Titicaca-Spain,Aspartic acid,10.10479042
+17,Titicaca,Spain,Titicaca-Spain,Aspartic acid,22.11489578
+4,Salcedo,Chile,Salcedo-Chile,Aspartic acid,25.86206897
+11,Salcedo,Chile,Salcedo-Chile,Aspartic acid,20.57926829
+12,Regalona,Chile,Regalona-Chile,Aspartic acid,14.84018265
+19,Regalona,Chile,Regalona-Chile,Aspartic acid,19.99252616
+6,Titicaca,Chile,Titicaca-Chile,Aspartic acid,25.78245254
+13,Titicaca,Chile,Titicaca-Chile,Aspartic acid,12.94397199
+20,Titicaca,Chile,Titicaca-Chile,Aspartic acid,18.89460154
+7,Salcedo,Peru,Salcedo-Peru,Aspartic acid,30.62827225
+21,Salcedo,Peru,Salcedo-Peru,Aspartic acid,21.92874693
+1,Salcedo,Spain,Salcedo-Spain,Glutamic acid,314.9925224
+15,Salcedo,Spain,Salcedo-Spain,Glutamic acid,419.1176471
+2,Regalona,Spain,Regalona-Spain,Glutamic acid,334.5642541
+9,Regalona,Spain,Regalona-Spain,Glutamic acid,255.9707242
+16,Regalona,Spain,Regalona-Spain,Glutamic acid,436.4013059
+10,Titicaca,Spain,Titicaca-Spain,Glutamic acid,97.05588822
+17,Titicaca,Spain,Titicaca-Spain,Glutamic acid,265.7600407
+4,Salcedo,Chile,Salcedo-Chile,Glutamic acid,273.3990148
+11,Salcedo,Chile,Salcedo-Chile,Glutamic acid,240.8536585
+12,Regalona,Chile,Regalona-Chile,Glutamic acid,253.04414
+19,Regalona,Chile,Regalona-Chile,Glutamic acid,323.2436472
+6,Titicaca,Chile,Titicaca-Chile,Glutamic acid,435.4155977
+13,Titicaca,Chile,Titicaca-Chile,Glutamic acid,249.1245623
+20,Titicaca,Chile,Titicaca-Chile,Glutamic acid,352.6349614
+7,Salcedo,Peru,Salcedo-Peru,Glutamic acid,187.3036649
+21,Salcedo,Peru,Salcedo-Peru,Glutamic acid,163.0835381
+1,Salcedo,Spain,Salcedo-Spain,Alanine,79.44915254
+15,Salcedo,Spain,Salcedo-Spain,Alanine,138.2992327
+2,Regalona,Spain,Regalona-Spain,Alanine,55.94534712
+9,Regalona,Spain,Regalona-Spain,Alanine,43.33590139
+10,Titicaca,Spain,Titicaca-Spain,Alanine,22.20558882
+17,Titicaca,Spain,Titicaca-Spain,Alanine,30.50330452
+4,Salcedo,Chile,Salcedo-Chile,Alanine,42.48768473
+11,Salcedo,Chile,Salcedo-Chile,Alanine,28.77286585
+12,Regalona,Chile,Regalona-Chile,Alanine,47.75494673
+19,Regalona,Chile,Regalona-Chile,Alanine,56.42750374
+6,Titicaca,Chile,Titicaca-Chile,Alanine,91.77783479
+13,Titicaca,Chile,Titicaca-Chile,Alanine,43.33416708
+20,Titicaca,Chile,Titicaca-Chile,Alanine,59.96143959
+7,Salcedo,Peru,Salcedo-Peru,Alanine,43.78272251
+21,Salcedo,Peru,Salcedo-Peru,Alanine,23.03439803
+1,Salcedo,Spain,Salcedo-Spain,Arginine,342.8464606
+15,Salcedo,Spain,Salcedo-Spain,Arginine,289.0664962
+9,Regalona,Spain,Regalona-Spain,Arginine,318.1818182
+16,Regalona,Spain,Regalona-Spain,Arginine,298.530889
+10,Titicaca,Spain,Titicaca-Spain,Arginine,94.81037924
+17,Titicaca,Spain,Titicaca-Spain,Arginine,248.7925775
+4,Salcedo,Chile,Salcedo-Chile,Arginine,117.4876847
+11,Salcedo,Chile,Salcedo-Chile,Arginine,143.6737805
+12,Regalona,Chile,Regalona-Chile,Arginine,190.8295282
+19,Regalona,Chile,Regalona-Chile,Arginine,236.3602392
+6,Titicaca,Chile,Titicaca-Chile,Arginine,144.3047717
+13,Titicaca,Chile,Titicaca-Chile,Arginine,86.29314657
+20,Titicaca,Chile,Titicaca-Chile,Arginine,128.9845758
+7,Salcedo,Peru,Salcedo-Peru,Arginine,169.8298429
+21,Salcedo,Peru,Salcedo-Peru,Arginine,195.5159705
+1,Salcedo,Spain,Salcedo-Spain,Asparagine,18.88085743
+15,Salcedo,Spain,Salcedo-Spain,Asparagine,26.08695652
+2,Regalona,Spain,Regalona-Spain,Asparagine,18.64844904
+9,Regalona,Spain,Regalona-Spain,Asparagine,14.83050847
+16,Regalona,Spain,Regalona-Spain,Asparagine,26.74535409
+10,Titicaca,Spain,Titicaca-Spain,Asparagine,6.23752495
+17,Titicaca,Spain,Titicaca-Spain,Asparagine,10.86680224
+4,Salcedo,Chile,Salcedo-Chile,Asparagine,18.28817734
+11,Salcedo,Chile,Salcedo-Chile,Asparagine,10.86128049
+12,Regalona,Chile,Regalona-Chile,Asparagine,10.65449011
+19,Regalona,Chile,Regalona-Chile,Asparagine,13.4529148
+6,Titicaca,Chile,Titicaca-Chile,Asparagine,15.58491534
+13,Titicaca,Chile,Titicaca-Chile,Asparagine,8.066533267
+20,Titicaca,Chile,Titicaca-Chile,Asparagine,10.79691517
+7,Salcedo,Peru,Salcedo-Peru,Asparagine,11.58376963
+21,Salcedo,Peru,Salcedo-Peru,Asparagine,9.213759214
+1,Salcedo,Spain,Salcedo-Spain,Phenylalanine,43.18295115
+15,Salcedo,Spain,Salcedo-Spain,Phenylalanine,42.96675192
+2,Regalona,Spain,Regalona-Spain,Phenylalanine,33.60413589
+9,Regalona,Spain,Regalona-Spain,Phenylalanine,29.85362096
+16,Regalona,Spain,Regalona-Spain,Phenylalanine,33.14917127
+10,Titicaca,Spain,Titicaca-Spain,Phenylalanine,12.9740519
+17,Titicaca,Spain,Titicaca-Spain,Phenylalanine,26.49974581
+4,Salcedo,Chile,Salcedo-Chile,Phenylalanine,20.68965517
+11,Salcedo,Chile,Salcedo-Chile,Phenylalanine,21.34146341
+12,Regalona,Chile,Regalona-Chile,Phenylalanine,22.26027397
+19,Regalona,Chile,Regalona-Chile,Phenylalanine,27.84005979
+6,Titicaca,Chile,Titicaca-Chile,Phenylalanine,31.16983068
+13,Titicaca,Chile,Titicaca-Chile,Phenylalanine,18.75937969
+20,Titicaca,Chile,Titicaca-Chile,Phenylalanine,25.64267352
+7,Salcedo,Peru,Salcedo-Peru,Phenylalanine,31.41361257
+21,Salcedo,Peru,Salcedo-Peru,Phenylalanine,27.08845209
+1,Salcedo,Spain,Salcedo-Spain,Glycine,11.40329013
+15,Salcedo,Spain,Salcedo-Spain,Glycine,22.25063939
+2,Regalona,Spain,Regalona-Spain,Glycine,11.44756278
+9,Regalona,Spain,Regalona-Spain,Glycine,9.437596302
+16,Regalona,Spain,Regalona-Spain,Glycine,24.86187845
+10,Titicaca,Spain,Titicaca-Spain,Glycine,3.867265469
+17,Titicaca,Spain,Titicaca-Spain,Glycine,5.338078292
+4,Salcedo,Chile,Salcedo-Chile,Glycine,7.389162562
+11,Salcedo,Chile,Salcedo-Chile,Glycine,5.144817073
+12,Regalona,Chile,Regalona-Chile,Glycine,7.229832572
+19,Regalona,Chile,Regalona-Chile,Glycine,8.594917788
+6,Titicaca,Chile,Titicaca-Chile,Glycine,18.47101077
+13,Titicaca,Chile,Titicaca-Chile,Glycine,7.87893947
+20,Titicaca,Chile,Titicaca-Chile,Glycine,10.98971722
+7,Salcedo,Peru,Salcedo-Peru,Glycine,4.908376963
+21,Salcedo,Peru,Salcedo-Peru,Glycine,2.57985258
+1,Salcedo,Spain,Salcedo-Spain,Glutamine,93.28265204
+15,Salcedo,Spain,Salcedo-Spain,Glutamine,117.5831202
+2,Regalona,Spain,Regalona-Spain,Glutamine,200.7016248
+9,Regalona,Spain,Regalona-Spain,Glutamine,169.1063174
+10,Titicaca,Spain,Titicaca-Spain,Glutamine,86.57684631
+17,Titicaca,Spain,Titicaca-Spain,Glutamine,149.2755465
+4,Salcedo,Chile,Salcedo-Chile,Glutamine,174.3842365
+11,Salcedo,Chile,Salcedo-Chile,Glutamine,153.5823171
+12,Regalona,Chile,Regalona-Chile,Glutamine,124.6194825
+19,Regalona,Chile,Regalona-Chile,Glutamine,144.9925262
+6,Titicaca,Chile,Titicaca-Chile,Glutamine,189.7126732
+13,Titicaca,Chile,Titicaca-Chile,Glutamine,102.8014007
+20,Titicaca,Chile,Titicaca-Chile,Glutamine,134.7686375
+7,Salcedo,Peru,Salcedo-Peru,Glutamine,133.7041885
+21,Salcedo,Peru,Salcedo-Peru,Glutamine,102.4570025
+1,Salcedo,Spain,Salcedo-Spain,Histidine,21.3110668
+15,Salcedo,Spain,Salcedo-Spain,Histidine,16.30434783
+2,Regalona,Spain,Regalona-Spain,Histidine,19.20236337
+9,Regalona,Spain,Regalona-Spain,Histidine,18.29738059
+16,Regalona,Spain,Regalona-Spain,Histidine,15.82119538
+10,Titicaca,Spain,Titicaca-Spain,Histidine,9.855289421
+17,Titicaca,Spain,Titicaca-Spain,Histidine,21.92425013
+4,Salcedo,Chile,Salcedo-Chile,Histidine,10.34482759
+11,Salcedo,Chile,Salcedo-Chile,Histidine,12.57621951
+12,Regalona,Chile,Regalona-Chile,Histidine,16.74277017
+19,Regalona,Chile,Regalona-Chile,Histidine,22.23467862
+6,Titicaca,Chile,Titicaca-Chile,Histidine,18.66341714
+13,Titicaca,Chile,Titicaca-Chile,Histidine,12.1935968
+20,Titicaca,Chile,Titicaca-Chile,Histidine,17.54498715
+7,Salcedo,Peru,Salcedo-Peru,Histidine,15.31413613
+21,Salcedo,Peru,Salcedo-Peru,Histidine,15.29484029
+1,Salcedo,Spain,Salcedo-Spain,Isoleucine,49.16500499
+15,Salcedo,Spain,Salcedo-Spain,Isoleucine,53.7084399
+2,Regalona,Spain,Regalona-Spain,Isoleucine,37.85081241
+9,Regalona,Spain,Regalona-Spain,Isoleucine,33.51309707
+16,Regalona,Spain,Regalona-Spain,Isoleucine,43.50828729
+10,Titicaca,Spain,Titicaca-Spain,Isoleucine,14.09680639
+17,Titicaca,Spain,Titicaca-Spain,Isoleucine,29.74072191
+4,Salcedo,Chile,Salcedo-Chile,Isoleucine,20.87438424
+11,Salcedo,Chile,Salcedo-Chile,Isoleucine,20.00762195
+12,Regalona,Chile,Regalona-Chile,Isoleucine,29.10958904
+19,Regalona,Chile,Regalona-Chile,Isoleucine,33.44544096
+6,Titicaca,Chile,Titicaca-Chile,Isoleucine,44.25346331
+13,Titicaca,Chile,Titicaca-Chile,Isoleucine,26.45072536
+20,Titicaca,Chile,Titicaca-Chile,Isoleucine,35.86118252
+7,Salcedo,Peru,Salcedo-Peru,Isoleucine,20.02617801
+21,Salcedo,Peru,Salcedo-Peru,Isoleucine,13.82063882
+1,Salcedo,Spain,Salcedo-Spain,Leucine,46.17397807
+15,Salcedo,Spain,Salcedo-Spain,Leucine,41.04859335
+2,Regalona,Spain,Regalona-Spain,Leucine,35.81979321
+9,Regalona,Spain,Regalona-Spain,Leucine,35.43913713
+16,Regalona,Spain,Regalona-Spain,Leucine,37.29281768
+10,Titicaca,Spain,Titicaca-Spain,Leucine,16.09281437
+17,Titicaca,Spain,Titicaca-Spain,Leucine,32.60040671
+4,Salcedo,Chile,Salcedo-Chile,Leucine,20.68965517
+11,Salcedo,Chile,Salcedo-Chile,Leucine,23.62804878
+12,Regalona,Chile,Regalona-Chile,Leucine,33.10502283
+19,Regalona,Chile,Regalona-Chile,Leucine,37.74289985
+6,Titicaca,Chile,Titicaca-Chile,Leucine,43.86865059
+13,Titicaca,Chile,Titicaca-Chile,Leucine,29.63981991
+20,Titicaca,Chile,Titicaca-Chile,Leucine,39.13881748
+7,Salcedo,Peru,Salcedo-Peru,Leucine,22.77486911
+21,Salcedo,Peru,Salcedo-Peru,Leucine,16.03194103
+1,Salcedo,Spain,Salcedo-Spain,Lysine,10.28165503
+15,Salcedo,Spain,Salcedo-Spain,Lysine,10.74168798
+2,Regalona,Spain,Regalona-Spain,Lysine,18.46381093
+9,Regalona,Spain,Regalona-Spain,Lysine,17.33436055
+16,Regalona,Spain,Regalona-Spain,Lysine,20.34153692
+10,Titicaca,Spain,Titicaca-Spain,Lysine,7.48502994
+17,Titicaca,Spain,Titicaca-Spain,Lysine,9.150991357
+4,Salcedo,Chile,Salcedo-Chile,Lysine,7.389162562
+11,Salcedo,Chile,Salcedo-Chile,Lysine,8.00304878
+12,Regalona,Chile,Regalona-Chile,Lysine,10.65449011
+19,Regalona,Chile,Regalona-Chile,Lysine,13.07922272
+6,Titicaca,Chile,Titicaca-Chile,Lysine,10.38994356
+13,Titicaca,Chile,Titicaca-Chile,Lysine,6.940970485
+20,Titicaca,Chile,Titicaca-Chile,Lysine,9.832904884
+7,Salcedo,Peru,Salcedo-Peru,Lysine,5.30104712
+21,Salcedo,Peru,Salcedo-Peru,Lysine,2.948402948
+1,Salcedo,Spain,Salcedo-Spain,Methionine,6.729810568
+15,Salcedo,Spain,Salcedo-Spain,Methionine,7.864450128
+2,Regalona,Spain,Regalona-Spain,Methionine,8.862629247
+9,Regalona,Spain,Regalona-Spain,Methionine,7.896764253
+16,Regalona,Spain,Regalona-Spain,Methionine,10.73581115
+10,Titicaca,Spain,Titicaca-Spain,Methionine,3.617764471
+17,Titicaca,Spain,Titicaca-Spain,Methionine,7.625826131
+4,Salcedo,Chile,Salcedo-Chile,Methionine,4.987684729
+11,Salcedo,Chile,Salcedo-Chile,Methionine,4.954268293
+12,Regalona,Chile,Regalona-Chile,Methionine,3.805175038
+19,Regalona,Chile,Regalona-Chile,Methionine,4.671150972
+6,Titicaca,Chile,Titicaca-Chile,Methionine,2.308876347
+13,Titicaca,Chile,Titicaca-Chile,Methionine,2.813906953
+20,Titicaca,Chile,Titicaca-Chile,Methionine,3.470437018
+7,Salcedo,Peru,Salcedo-Peru,Methionine,7.853403141
+21,Salcedo,Peru,Salcedo-Peru,Methionine,5.712530713
+1,Salcedo,Spain,Salcedo-Spain,Proline,57.76420738
+15,Salcedo,Spain,Salcedo-Spain,Proline,55.0511509
+2,Regalona,Spain,Regalona-Spain,Proline,88.99556869
+9,Regalona,Spain,Regalona-Spain,Proline,78.96764253
+16,Regalona,Spain,Regalona-Spain,Proline,94.92717228
+10,Titicaca,Spain,Titicaca-Spain,Proline,44.91017964
+17,Titicaca,Spain,Titicaca-Spain,Proline,78.16471784
+4,Salcedo,Chile,Salcedo-Chile,Proline,73.52216749
+11,Salcedo,Chile,Salcedo-Chile,Proline,71.07469512
+12,Regalona,Chile,Regalona-Chile,Proline,72.29832572
+19,Regalona,Chile,Regalona-Chile,Proline,101.8310912
+6,Titicaca,Chile,Titicaca-Chile,Proline,91.39302206
+13,Titicaca,Chile,Titicaca-Chile,Proline,55.71535768
+20,Titicaca,Chile,Titicaca-Chile,Proline,85.218509
+7,Salcedo,Peru,Salcedo-Peru,Proline,37.5
+21,Salcedo,Peru,Salcedo-Peru,Proline,35.56511057
+1,Salcedo,Spain,Salcedo-Spain,Serine,14.76819541
+15,Salcedo,Spain,Salcedo-Spain,Serine,22.05882353
+2,Regalona,Spain,Regalona-Spain,Serine,17.54062038
+9,Regalona,Spain,Regalona-Spain,Serine,14.25269646
+10,Titicaca,Spain,Titicaca-Spain,Serine,7.859281437
+17,Titicaca,Spain,Titicaca-Spain,Serine,11.62938485
+4,Salcedo,Chile,Salcedo-Chile,Serine,14.408867
+11,Salcedo,Chile,Salcedo-Chile,Serine,10.86128049
+12,Regalona,Chile,Regalona-Chile,Serine,8.751902588
+19,Regalona,Chile,Regalona-Chile,Serine,10.65022422
+6,Titicaca,Chile,Titicaca-Chile,Serine,15.00769625
+13,Titicaca,Chile,Titicaca-Chile,Serine,7.316158079
+20,Titicaca,Chile,Titicaca-Chile,Serine,10.218509
+7,Salcedo,Peru,Salcedo-Peru,Serine,10.79842932
+21,Salcedo,Peru,Salcedo-Peru,Serine,6.265356265
+1,Salcedo,Spain,Salcedo-Spain,Hydroxyproline,4.486540379
+15,Salcedo,Spain,Salcedo-Spain,Hydroxyproline,3.452685422
+2,Regalona,Spain,Regalona-Spain,Hydroxyproline,5.169867061
+9,Regalona,Spain,Regalona-Spain,Hydroxyproline,5.00770416
+16,Regalona,Spain,Regalona-Spain,Hydroxyproline,4.143646409
+10,Titicaca,Spain,Titicaca-Spain,Hydroxyproline,2.869261477
+17,Titicaca,Spain,Titicaca-Spain,Hydroxyproline,5.338078292
+4,Salcedo,Chile,Salcedo-Chile,Hydroxyproline,3.140394089
+11,Salcedo,Chile,Salcedo-Chile,Hydroxyproline,4.00152439
+12,Regalona,Chile,Regalona-Chile,Hydroxyproline,4.566210046
+19,Regalona,Chile,Regalona-Chile,Hydroxyproline,5.605381166
+6,Titicaca,Chile,Titicaca-Chile,Hydroxyproline,4.040533607
+13,Titicaca,Chile,Titicaca-Chile,Hydroxyproline,3.376688344
+20,Titicaca,Chile,Titicaca-Chile,Hydroxyproline,4.241645244
+7,Salcedo,Peru,Salcedo-Peru,Hydroxyproline,3.534031414
+21,Salcedo,Peru,Salcedo-Peru,Hydroxyproline,3.685503686
+1,Salcedo,Spain,Salcedo-Spain,Threonine,28.22781655
+15,Salcedo,Spain,Salcedo-Spain,Threonine,40.08951407
+2,Regalona,Spain,Regalona-Spain,Threonine,36.18906942
+9,Regalona,Spain,Regalona-Spain,Threonine,32.16486903
+16,Regalona,Spain,Regalona-Spain,Threonine,51.04218985
+10,Titicaca,Spain,Titicaca-Spain,Threonine,14.09680639
+17,Titicaca,Spain,Titicaca-Spain,Threonine,21.54295882
+4,Salcedo,Chile,Salcedo-Chile,Threonine,23.46059113
+11,Salcedo,Chile,Salcedo-Chile,Threonine,18.67378049
+12,Regalona,Chile,Regalona-Chile,Threonine,27.58751903
+19,Regalona,Chile,Regalona-Chile,Threonine,33.07174888
+6,Titicaca,Chile,Titicaca-Chile,Threonine,39.82811698
+13,Titicaca,Chile,Titicaca-Chile,Threonine,19.69734867
+20,Titicaca,Chile,Titicaca-Chile,Threonine,26.79948586
+7,Salcedo,Peru,Salcedo-Peru,Threonine,21.79319372
+21,Salcedo,Peru,Salcedo-Peru,Threonine,13.82063882
+1,Salcedo,Spain,Salcedo-Spain,Tryptophan,55.14705882
+15,Salcedo,Spain,Salcedo-Spain,Tryptophan,59.65473146
+2,Regalona,Spain,Regalona-Spain,Tryptophan,43.38995569
+9,Regalona,Spain,Regalona-Spain,Tryptophan,37.75038521
+16,Regalona,Spain,Regalona-Spain,Tryptophan,48.59367152
+10,Titicaca,Spain,Titicaca-Spain,Tryptophan,18.58782435
+17,Titicaca,Spain,Titicaca-Spain,Tryptophan,47.08947636
+4,Salcedo,Chile,Salcedo-Chile,Tryptophan,57.08128079
+11,Salcedo,Chile,Salcedo-Chile,Tryptophan,56.21189024
+12,Regalona,Chile,Regalona-Chile,Tryptophan,29.6803653
+19,Regalona,Chile,Regalona-Chile,Tryptophan,39.98505232
+6,Titicaca,Chile,Titicaca-Chile,Tryptophan,37.32683427
+13,Titicaca,Chile,Titicaca-Chile,Tryptophan,20.07253627
+20,Titicaca,Chile,Titicaca-Chile,Tryptophan,30.26992288
+7,Salcedo,Peru,Salcedo-Peru,Tryptophan,124.0837696
+21,Salcedo,Peru,Salcedo-Peru,Tryptophan,118.1203931
+1,Salcedo,Spain,Salcedo-Spain,Valine,62.62462612
+15,Salcedo,Spain,Salcedo-Spain,Valine,87.46803069
+2,Regalona,Spain,Regalona-Spain,Valine,42.46676514
+9,Regalona,Spain,Regalona-Spain,Valine,38.13559322
+16,Regalona,Spain,Regalona-Spain,Valine,64.22651934
+10,Titicaca,Spain,Titicaca-Spain,Valine,16.09281437
+17,Titicaca,Spain,Titicaca-Spain,Valine,29.74072191
+4,Salcedo,Chile,Salcedo-Chile,Valine,26.97044335
+11,Salcedo,Chile,Salcedo-Chile,Valine,24.00914634
+12,Regalona,Chile,Regalona-Chile,Valine,28.91933029
+19,Regalona,Chile,Regalona-Chile,Valine,34.75336323
+6,Titicaca,Chile,Titicaca-Chile,Valine,46.75474602
+13,Titicaca,Chile,Titicaca-Chile,Valine,26.07553777
+20,Titicaca,Chile,Titicaca-Chile,Valine,34.51156812
+7,Salcedo,Peru,Salcedo-Peru,Valine,39.07068063
+21,Salcedo,Peru,Salcedo-Peru,Valine,26.35135135

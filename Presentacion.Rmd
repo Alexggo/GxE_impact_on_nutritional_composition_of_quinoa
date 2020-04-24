@@ -1,0 +1,47 @@
+---
+title: "Presentacion Quinoa"
+author: "Alejandro Gil"
+date: "17 de noviembre de 2017"
+output: ioslides_presentation
+---
+
+## Aminoacidos Rawdata
+
+Estructura de los datos de aminoacidos. Todos los datos en formato narrow para el analisis
+````{r, echo=FALSE}
+setwd('C:/Users/alexg/OneDrive - Stony Brook University/13. Proyectos/DATOS PROYECTO QUINOA/Estadistica Alex y rawdata')
+
+###AMINOACIDOS###
+rawamino<-read.csv(file='rawamino.csv')
+rawamino$VAR.PAIS<-factor(rawamino$VAR.PAIS,
+                         levels=c('Regalona-Chile','Salcedo-Chile',
+                                  'Titicaca-Chile','Regalona-España',
+                                  'Salcedo-España','Titicaca-España',
+                                  'Salcedo-Perú'))
+#Vector aminoacidos
+aminovet<-levels(rawamino$AMINOACIDO)
+````
+
+````{r,echo=FALSE}
+summary(rawamino)
+````
+
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

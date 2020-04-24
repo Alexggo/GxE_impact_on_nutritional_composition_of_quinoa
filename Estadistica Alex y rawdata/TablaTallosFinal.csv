@@ -1,0 +1,8 @@
+Variety,Location,Yield kg/ha,Seed weight per plant (g),Harvest index,Plant height (m),Stem diameter (cm),Panicle length (cm),Panicle diameter (cm),Plant weight (g),Days to flowering,Days to maturity
+Regalona,Chile,2402.33±465.28bc,40.33±13.80ab,0.42±0.22a,1.30±0.06ab,15.33±1.53abc,17.00±1.00d,11.00±1.00b,103.00±18.08ab,70,165
+Salcedo,Chile,2743.33±80.13b,36.67±7.02bc,0.47±0.09a,0.84±0.09e,11.33±1.53e,31.66±3.51b,7.00±0.00d,78.00±2.65cd,100,180
+Titicaca,Chile,4300.33±1841.58a,42.67±9.71ab,0.50±0.00a,1.04±0.09d,12.00±1.00de,22.33±2.08c,7.00±0.00d,86.00±19.31bc,50,105
+Salcedo,Peru,5170.00±142.82a,26.40±1.14c,0.40±0.00a,1.36±0.01a,18.25±0.50a,35.50±1.29a,15.60±0.71a,66.00±2.58d,65,145
+Regalona,Spain,2606.00±0.00bc,50.60±9.58a,0.47±0.04a,1.25±0.05bc,14.80±2.28bcd,20.00±2.55cd,12.00±1.58b,107.80±15.06a,63,138
+Salcedo,Spain,*,*,*,1.36±0.06a,16.80±2.77ab,36.00±2.55a,9.00±1.00c,*,92,187
+Titicaca,Spain,1526.00±0.00c,37.20±4.66abc,0.42±0.03a,1.15±0.03c,12.20±1.30cde,28.00±2.35b,7.00±1.00d,89.60±7.67abc,51,119

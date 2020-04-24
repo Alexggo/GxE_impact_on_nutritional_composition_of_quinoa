@@ -1,0 +1,441 @@
+﻿New Table( "Datos aminoácidos tabla",
+	Add Rows( 21 ),
+	New Column( "Columna 1",
+		Character,
+		Nominal,
+		Set Values(
+			{"1", "1", "1", "2", "2", "2", "3", "3", "3", "4", "4", "4", "5", "5",
+			"5", "6", "6", "6", "7", "7", "7"}
+		)
+	),
+	New Column( "LISINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[10.46859422, ., 10.74168798, 18.83308715, 17.33436055, 21.09492717, .,
+			7.859281437, 9.150991357, 7.389162562, 8.00304878, ., ., 10.65449011,
+			13.07922272, 10.38994356, 7.128564282, 9.640102828, 5.104712042, .,
+			4.054054054]
+		)
+	),
+	New Column( "HISTIDINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[20.93718843, ., 16.49616368, 20.31019202, 18.10477658, 15.82119538, .,
+			10.10479042, 21.35231317, 10.34482759, 12.57621951, ., ., 16.74277017,
+			22.42152466, 18.47101077, 12.3811906, 17.35218509, 15.31413613, .,
+			15.47911548]
+		)
+	),
+	New Column( "ARGININA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[346.2113659, ., 293.0946292, ., 313.559322, 302.862883, ., 102.1706587,
+			243.2638536, 120.4433498, 144.054878, ., ., 194.8249619, 237.2944694,
+			146.9984607, 87.04352176, 129.562982, 169.6335079, ., 195.7002457]
+		)
+	),
+	New Column( "GLICINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[12.71186441, ., 19.9488491, 11.44756278, 9.630200308, 26.36865897, .,
+			3.74251497, 5.338078292, 7.389162562, 5.335365854, ., ., 7.229832572,
+			8.594917788, 18.08619805, 8.254127064, 10.79691517, 4.712041885, .,
+			2.948402948]
+		)
+	),
+	New Column( "SERINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[16.07676969, ., 20.33248082, 16.98670606, 14.63790447, ., .,
+			7.859281437, 11.4387392, 14.77832512, 11.05182927, ., ., 8.751902588,
+			10.83707025, 15.00769625, 7.503751876, 10.02570694, 10.60209424, .,
+			7.371007371]
+		)
+	),
+	New Column( "ASPARRAGINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[20.1894317, ., 24.93606138, 18.46381093, 15.02311248, 26.74535409, .,
+			6.362275449, 11.05744789, 12.93103448, 11.05182927, ., ., 10.65449011,
+			13.4529148, 15.39250898, 8.254127064, 10.79691517, 11.38743455, .,
+			9.213759214]
+		)
+	),
+	New Column( "AC.ASPÁRTICO",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[51.96909272, ., 64.06649616, 57.6070901, 46.9953775, ., ., 11.22754491,
+			22.49618709, 25.86206897, 21.34146341, ., ., 14.84018265, 19.80568012,
+			25.78245254, 13.13156578, 18.50899743, 29.84293194, ., 22.85012285]
+		)
+	),
+	New Column( "ALANINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[88.98305085, ., 125.4475703, 55.39143279, 44.29892142, ., .,
+			22.08083832, 30.50330452, 43.22660099, 29.72560976, ., ., 47.56468798,
+			56.42750374, 89.6613648, 44.64732366, 57.84061697, 42.80104712, .,
+			24.69287469]
+		)
+	),
+	New Column( "GLUTAMINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[98.33000997, ., 112.4040921, 196.4549483, 169.4915254, ., .,
+			88.69760479, 150.2287748, 175.862069, 157.7743902, ., ., 124.4292237,
+			145.3662182, 187.7886095, 105.4277139, 132.6478149, 132.3298429, .,
+			103.1941032]
+		)
+	),
+	New Column( "TREONINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[30.28414756, ., 36.8286445, 37.29689808, 32.74268105, 52.73731793, .,
+			14.22155689, 21.73360447, 23.6453202, 19.05487805, ., ., 27.39726027,
+			32.88490284, 39.63571062, 20.26013007, 26.22107969, 21.59685864, .,
+			13.63636364]
+		)
+	),
+	New Column( "TRANS-4-HIDROXYPROLINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[4.486540379, ., 3.452685422, 5.539143279, 5.00770416, 4.143646409, .,
+			3.368263473, 5.338078292, 2.955665025, 3.81097561, ., ., 4.566210046,
+			5.605381166, 3.848127245, 3.376688344, 4.241645244, 3.534031414, .,
+			3.685503686]
+		)
+	),
+	New Column( "AC.GLUTÁMICO",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[332.003988, ., 403.5805627, 328.2865583, 260.0154083, 441.109995, .,
+			107.4101796, 266.141332, 275.9852217, 246.570122, ., ., 254.1856925,
+			328.1016442, 434.8383787, 251.7508754, 349.3573265, 178.6649215, .,
+			163.6363636]
+		)
+	),
+	New Column( "CISTEÍNA",
+		Numeric,
+		Nominal,
+		Format( "", 16 ),
+		Set Values(
+			[., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., .]
+		)
+	),
+	New Column( "PROLINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[59.44666002, ., 54.47570332, 88.99556869, 80.12326656, 93.42039176, .,
+			46.78143713, 78.16471784, 73.89162562, 72.40853659, ., ., 71.91780822,
+			101.6442451, 90.04617753, 56.27813907, 85.218509, 36.91099476, .,
+			36.48648649]
+		)
+	),
+	New Column( "VALINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[67.67198405, ., 83.63171355, 42.83604136, 39.29121726, 64.79156203, .,
+			17.58982036, 30.12201322, 27.33990148, 24.77134146, ., ., 28.53881279,
+			34.37967115, 44.25346331, 26.63831916, 34.31876607, 38.87434555, .,
+			28.00982801]
+		)
+	),
+	New Column( "METIONINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[7.103688933, ., 7.672634271, 8.862629247, 8.089368259, 10.92415871, .,
+			3.74251497, 9.150991357, 4.802955665, 4.573170732, ., ., 3.805175038,
+			4.85799701, 4.617752694, 2.626313157, 3.470437018, 7.853403141, .,
+			6.265356265]
+		)
+	),
+	New Column( "ISOLEUCINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[51.59521436, ., 52.55754476, 38.40472674, 33.51309707, 43.69663486, .,
+			15.71856287, 29.74072191, 21.0591133, 20.19817073, ., ., 28.53881279,
+			33.25859492, 43.09902514, 26.63831916, 36.63239075, 20.02617801, .,
+			15.11056511]
+		)
+	),
+	New Column( "LEUCINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[47.85643071, ., 40.66496164, 38.77400295, 35.82434515, 37.66951281, .,
+			17.96407186, 32.79105236, 20.68965517, 24.3902439, ., ., 33.10502283,
+			38.11659193, 41.94458697, 30.0150075, 38.94601542, 22.77486911, .,
+			17.69041769]
+		)
+	),
+	New Column( "FENILALANINA",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[43.36989033, ., 42.96675192, 33.60413589, 29.66101695, 33.14917127, .,
+			13.47305389, 26.69039146, 20.68965517, 21.34146341, ., ., 22.07001522,
+			28.02690583, 30.78501796, 18.75937969, 25.83547558, 31.41361257, .,
+			28.00982801]
+		)
+	),
+	New Column( "TRIPTÓFANO",
+		Numeric,
+		Continuous,
+		Format( "Best", 12 ),
+		Set Values(
+			[56.08175474, ., 59.4629156, 42.46676514, 38.13559322, 48.59367152, .,
+			20.95808383, 47.28012201, 57.26600985, 56.02134146, ., ., 29.29984779,
+			39.98505232, 37.32683427, 19.88494247, 30.46272494, 124.4764398, .,
+			119.4103194]
+		)
+	)
+);
+Fit Group(
+	Fit Model(
+		Y( :LISINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:LISINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :HISTIDINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:HISTIDINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :ARGININA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:ARGININA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :GLICINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:GLICINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :SERINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:SERINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :ASPARRAGINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:ASPARRAGINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :AC.ASPÁRTICO ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:AC.ASPÁRTICO << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :ALANINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:ALANINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :GLUTAMINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:GLUTAMINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :TREONINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:TREONINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :Name( "TRANS-4-HIDROXYPROLINA" ) ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:Name( "TRANS-4-HIDROXYPROLINA" ) << {Lack of Fit( 0 ),
+			Plot Actual by Predicted( 1 ), Plot Regression( 0 ),
+			Plot Residual by Predicted( 1 ), Plot Effect Leverage( 1 ), {:Columna 1
+			 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :AC.GLUTÁMICO ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:AC.GLUTÁMICO << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Student's t( 0.05 ),
+			LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :PROLINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:PROLINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :VALINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:VALINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :METIONINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:METIONINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :ISOLEUCINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:ISOLEUCINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :LEUCINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:LEUCINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :FENILALANINA ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:FENILALANINA << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 << {LSMeans Tukey HSD( 0.05 )}}}
+		)
+	),
+	Fit Model(
+		Y( :TRIPTÓFANO ),
+		Effects( :Columna 1 ),
+		Personality( Standard Least Squares ),
+		Emphasis( Effect Leverage ),
+		Run(
+			:TRIPTÓFANO << {Lack of Fit( 0 ), Plot Actual by Predicted( 1 ),
+			Plot Regression( 0 ), Plot Residual by Predicted( 1 ),
+			Plot Effect Leverage( 1 ), {:Columna 1 <<
+			{LSMeans Student's t( 0.05, Crosstab Report( 0 ) ),
+			LSMeans Tukey HSD( 0.05 )}}}
+		)
+	)
+);
